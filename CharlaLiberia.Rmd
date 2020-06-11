@@ -1,0 +1,472 @@
+---
+title: "Minor Bonilla-Gómez"
+date: "UCR-LIBERIA"
+author: "mbonilla@cipadcr.com"
+output:
+  rmdformats::material:
+    highlight: kate
+    self_contained: true
+    thumbnails: true
+    gallery: true
+    fig_width: 4
+    fig_height: 4
+    df_print: kable
+---
+
+```{r echo_f, include=FALSE, message=FALSE, warning=FALSE}
+  knitr::opts_chunk$set(echo = FALSE)
+  CLASE01="F:/LEAD/2020/ESS/002 IMAGENES/CL01/"
+  CLASE00="F:/LEAD/2020/ESS/002 IMAGENES/CL02/"
+  PONENCIA="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/IMAGENES/"
+```
+
+```{r IMGLoop, echo=FALSE, out.width = "400px",fig.align="left", message=FALSE, warning=FALSE}
+    IMG=paste0(PONENCIA,"CIPAD-Logo.png")
+    knitr::include_graphics(IMG)
+```
+
+```{r librerias, include=FALSE, message=FALSE, warning=FALSE}
+# library(devtools)
+# library(datarium)
+# library(stargazer)
+# library(ggfortify)
+# library(magrittr)
+# library(DT)
+# library(ElemStatLearn)
+# library(caret)
+# library(rlang)
+# library(regclass)
+```
+
+<!------------FORMATO--------------->
+
+<style>
+      .page {
+            transform: translateY(1080px);
+            transition: transform 0 linear;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 20px;
+            margin-left: 1em;
+            }
+      .pages h1 {
+                color: #f5b815;
+                font-style: bold;
+                margin-top: 5px;
+                }
+      .header-panel h4.date {
+                            font-size: 16px;
+                            color: #f5b815;
+                            padding-left: 35px;
+                            margin: 5px 0px;
+                            font-style: bold;
+                            }
+        a, a:focus, a:hover {
+                            color: #99a83d;
+                            }                            
+      body {
+            text-align: justify
+            font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #28105E;
+            background-color: #fff;
+           }
+    .header-panel {
+                  background-color: #2e619c;
+                  min-height: 144px;
+                  position: relative;
+                  z-index: 3;
+                }
+    .panel {
+            margin-bottom: 20px;
+            background-color: rgba(255,255,255,0);
+            border: 1px solid transparent;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0);
+            box-shadow: 0 1px 1px rgba(0,0,0,0);
+          } 
+    body .container .jumbotron, 
+    body .container .jumbotron-default, 
+    body .container .well, 
+    body .container .well-default, 
+    body .container-fluid .jumbotron, 
+    body .container-fluid .jumbotron-default, 
+    body .container-fluid .well, 
+    body .container-fluid .well-default {
+                                        background-color: #e6e2e2;
+                                        }        
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus, 
+    .nav-pills>li.active>a:hover {
+                                  color: #fff;
+                                  background-color: #2e619c;
+                                  }
+    .nav-pills>li>a {
+                     border-radius: 4px;
+                    }
+    .nav>li>a {
+              position: relative;
+              display: block;
+              padding: 10px 15px;
+              }
+    a, 
+    a:focus, 
+    a:hover {
+              color: #093e39;
+            }
+    .menu ul li a {
+                  color: rgb(51, 51, 51);
+                  text-decoration: none;
+                  }        
+            
+</style>
+
+<!------------CONTENIDO--------------->
+
+#  {.tabset .tabset-fade .tabset-pills}
+
+
+```{r, out.width = "600px",fig.align="center", message=FALSE, warning=FALSE, echo=FALSE}
+    IMG=paste0(PONENCIA,"Fractal Loop 2.gif")
+    knitr::include_graphics(IMG)
+```
+
+# EL MERCADO {.tabset .tabset-fade .tabset-pills}
+
+## Trends
+
+<iframe id="trends-widget-1" title="trends-widget-1" src="https://trends.google.com:443/trends/embed/explore/TIMESERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Data%20Science%22%2C%22geo%22%3A%22US%22%2C%22time%22%3A%222008-10-05%202020-06-10%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D&amp;tz=360&amp;eq=date%3D2008-10-05%25202020-06-10%26geo%3DUS%26q%3DData%2520Science" width="100%" frameborder="0" scrolling="1" style="height:450px;">
+</iframe>
+
+<iframe id="trends-widget-1" title="trends-widget-1" src="https://trends.google.com:443/trends/embed/explore/RELATED_QUERIES?req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22data%20science%22%2C%22geo%22%3A%22US%22%2C%22time%22%3A%22today%2012-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D&amp;tz=360&amp;eq=q%3Ddata%2520science%26geo%3DUS%26date%3Dtoday%2012-m" width="100%" frameborder="0" scrolling="1" style="height: 400px;">
+</iframe>
+
+## Las Nuevas Modas {.tabset .tabset-fade .tabset-pills}
+
+### THE ECONOMIST
+```{r BigData000, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(CLASE01,"BigData000.JFIF")
+    knitr::include_graphics(IMG)
+```
+
+### TIME
+```{r BigData001, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(CLASE01,"BigData001.PNG")
+    knitr::include_graphics(IMG)
+```
+
+## El Nuevo Traje del Emperador {.tabset .tabset-fade .tabset-pills}
+
+### Libro
+```{r ImgElEmperador, out.width = "800px", fig.align="center"}
+    IMG=paste0(CLASE01,"ElReyNoTieneRopa.PNG")
+    knitr::include_graphics(IMG)
+```
+
+### Sinapsis 
+Tomado de [WIKIPEDIA](https://es.wikipedia.org/wiki/El_traje_nuevo_del_emperador)
+
+>
+Hace muchos años vivía un rey que era comedido en todo excepto en una cosa: se preocupaba mucho por su vestuario. 
+Un día oyó a Guido y Luigi Farabutto decir que podían fabricar la tela más suave y delicada que pudiera imaginar. 
+Esta prenda, añadieron, tenía la especial capacidad de ser invisible para cualquier estúpido o incapaz para su cargo. 
+Por supuesto, no había prenda alguna sino que los pícaros hacían lucir que trabajaban en la ropa, pero estos se quedaban 
+con los ricos materiales que solicitaban para tal fin.
+>
+Sintiéndose algo nervioso acerca de si él mismo sería capaz de ver la prenda o no, el emperador envió primero a dos de sus 
+hombres de confianza a verlo. Evidentemente, ninguno de los dos admitieron que eran incapaces de ver la prenda y comenzaron 
+a alabar a la misma. Toda la ciudad había oído hablar del fabuloso traje y estaba deseando comprobar cuán estúpido era su vecino.
+>
+Los estafadores hicieron como que le ayudaban a ponerse la inexistente prenda y el emperador salió con ella en un desfile, 
+sin admitir que era demasiado inepto o estúpido como para poder verla.
+>
+Toda la gente del pueblo alabó enfáticamente el traje, temerosos de que sus vecinos se dieran cuenta de que no podían verlo, 
+hasta que un niño dijo:
+>
+¡Pero si va desnudo!
+>
+La gente empezó a cuchichear la frase hasta que toda la multitud gritó que el emperador iba desnudo. 
+>
+El emperador lo oyó y supo que tenían razón... Pero levantó la cabeza y terminó el desfile.
+
+## Ciencia de Datos  {.tabset .tabset-fade .tabset-pills}
+
+>"...La ciencia de datos es un campo interdisciplinario que involucra métodos científicos, procesos y sistemas para extraer conocimiento o un mejor entendimiento de datos en sus diferentes formas, ya sea estructurados o no estructurados, lo cual es una continuación de algunos campos de análisis de datos como la estadística, la minería de datos, el aprendizaje automático, y la analítica predictiva..."
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='https://es.wikipedia.org/wiki/Ciencia_de_datos' >
+</iframe>
+
+## 2012
+
+```{r, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(PONENCIA,"HBR.JPG")
+    knitr::include_graphics(IMG)
+```
+
+> ... Who Are These People?  
+If capitalizing on big data depends on hiring scarce data scientists, then the challenge for managers is to learn how to identify that talent, attract it to an enterprise, and make it productive. None of those tasks is as straightforward as it is with other, established organizational roles. Start with the fact that there are no university programs offering degrees in data science. There is also little consensus on where the role fits in an organization, how data scientists can add the most value, and how their performance should be measured...  
+
+>...What kind of person does all this? 
+What abilities make a data scientist successful? Think of him or her as a hybrid of data hacker, analyst, communicator, and trusted adviser. The combination is extremely powerful—and rare...
+
+## 2019
+
+>"...data scientists don’t actually build or maintain data infrastructures; if data infrastructures aren’t set up efficiently the work of a data scientist will be in vain..."
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='https://www.information-age.com/data-engineer-sexiest-job-21st-century-123480578/' >
+</iframe>
+
+## LinkedIn
+
+```{r, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(PONENCIA,"LinkedIn 001.JPG")
+    knitr::include_graphics(IMG)
+```
+
+## Col. Abogados
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='https://www.abogados.or.cr/consultaagremiados/' >
+</iframe>
+
+# TECNOLOGIAS  {.tabset .tabset-fade .tabset-pills}
+
+* El mundo giró en favor de las tecnologías libres vs {SAS, SPSS, MATLAB, EVIEWS, ...}
+* Se convirtió en un espacio colaborativo
+* Pero...
+
+##
+
+## R
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='https://cran.r-project.org/'>
+</iframe>
+
+## Julia
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='https://julialang.org/'>
+</iframe>
+
+## KMEANS
+
+<p align="center">
+<iframe 
+  width='900px' 
+  height='850px' 
+  src='http://shabal.in/visuals/kmeans/3.html'>
+</iframe>
+
+# REC. VIDEOS {.tabset .tabset-fade .tabset-pills}
+ 
+ Muchos; vivimos en un mundo digital (i.e. ésta charla)  
+ 
+ * Gratis
+ * Accesibles
+ 
+ pero..
+ 
+## RO1
+
+Gilbert Strang: Lectures on Linear Algebra
+(35 clases)
+
+<p align="center">
+<iframe 
+width="900" 
+height="600"
+src="https://www.youtube.com/embed/ZK3O402wf1c">
+</iframe>
+         
+## R02
+
+3Blue1Brown: Essence of linear algebra
+(15 videos)
+
+<p align="center">
+<iframe width="900" 
+height="600"
+src="https://www.youtube.com/embed/fNk_zzaMoSs">
+</iframe>  
+
+## R03
+
+StatQuest with Josh Starmer
+Stats
+
+<p align="center">
+<iframe 
+width="900" 
+height="600"
+src="https://www.youtube.com/embed/FgakZw6K1QQ">
+</iframe>  
+             
+# REC. LIBROS {.tabset .tabset-fade .tabset-pills}
+
+ Muchos; vivimos en un mundo digital (i.e. ésta charla)  
+ 
+ * Gratis
+ * Accesibles
+ 
+ pero..
+
+## PUB00
+
+<p align="center">
+<iframe src="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/TS.pdf" 
+         width="820" 
+         height="1200" 
+         type="application/pdf" 
+         style="width:718px; 
+         height:700px;
+         " frameborder="0">
+</iframe>
+
+## PUB01
+
+<p align="center">
+<iframe src="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/TS multi.pdf" 
+         width="820" 
+         height="1200" 
+         type="application/pdf" 
+         style="width:718px; 
+         height:700px;
+         " frameborder="0">
+</iframe>
+
+## PUB02
+
+<p align="center">
+<iframe src="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/Stats.pdf" 
+         width="820" 
+         height="1200" 
+         type="application/pdf" 
+         style="width:718px; 
+         height:700px;
+         " frameborder="0">
+</iframe>
+
+## PUB03
+
+<p align="center">
+<iframe src="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/mml-book.pdf" 
+         width="820" 
+         height="1200" 
+         type="application/pdf" 
+         style="width:718px; 
+         height:700px;
+         " frameborder="0">
+</iframe>
+
+## PERO
+
+> Muchos no hacen la tarea -les resulta más fácil copiar el trabajo de otro-
+> pero sucede que cuando no se ha estudiado un tema, puede resultar difícil evitar
+> persignarse ante un horno de barro.
+
+[IR A PAGINA](https://github.com/AceLewis/my_first_calculator.py)
+
+<p align="center">
+<object 
+data ="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/CalculadoraPy.txt" type="text/plain"
+width="900" 
+style="height: 600px">
+
+<a href="F:/BKLLB/PONENCIAS ACADEMICAS/UCR/2020/CHARLA DATA SCIENCE BS/CalculadoraPy.txt">No Support?</a>
+
+</object>
+
+# SU PREPARACION
+
+  * Cursos y vínculo aplicado
+  * Esto para qué?
+  * ...
+  * Una base sólida permite levantar nuevos pisos!
+
+```{r, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(PONENCIA,"build.gif")
+    knitr::include_graphics(IMG)
+```  
+
+
+# CODIGO MORAL  {.tabset .tabset-fade .tabset-pills}
+
+El más importante de todos los campos!
+
+```{r, out.width = "800px",fig.align="center", message=FALSE, warning=FALSE}
+    IMG=paste0(PONENCIA,"codigo.jpg")
+    knitr::include_graphics(IMG)
+```
+
+# EL PAIS
+
+<p align="center">
+<iframe width='900px' height='850px' src='http://shiny.cipadcr.com/covid19/' >
+</iframe>
+
+# REFLEXION FINAL   {.tabset .tabset-fade .tabset-pills}
+
+## JURAMENTO HIPOCRATICO
+
+>Tributaré a mi maestro de Medicina el mismo respeto que a los autores de mis días, partiré con ellos mi fortuna y los socorreré si lo necesitaren; trataré a sus hijos como a mis hermanos y si quieren aprender la ciencia, se la enseñaré desinteresadamente y sin ningún género de recompensa.
+
+>Instruiré con preceptos, lecciones orales y demás modos de enseñanza a mis hijos, a los de mi maestro y a los discípulos que se me unan bajo el convenio y juramento que determine la ley médica, y a nadie más.
+
+>Estableceré el régimen de los enfermos de la manera que les sea más provechosa según mis facultades y a mi entender, evitando todo mal y toda injusticia. No accederé a pretensiones que busquen la administración de venenos, pesarios abortivos ni sugeriré a nadie cosa semejante.
+
+>Pasaré mi vida y ejerceré mi profesión con inocencia y pureza. No ejecutaré la talla, dejando tal operación a los que se dedican a practicarla.
+
+>En cualquier casa donde entre, no llevaré otro objetivo que el bien de los enfermos; me libraré de cometer voluntariamente faltas injuriosas o acciones corruptoras y evitaré sobre todo la seducción de mujeres u hombres, libres o esclavos.
+
+>Guardaré secreto sobre lo que oiga y vea en la sociedad por razón de mi ejercicio y que no sea indispensable divulgar, sea o no del dominio de mi profesión, considerando como un deber el ser discreto en tales casos.
+
+>Si observo con fidelidad este juramento, séame concedido gozar felizmente mi vida y mi profesión, honrado siempre entre los hombres; si lo quebranto y soy perjuro, caiga sobre mí la suerte contraria.
+
+## JURAMENTO HIPOCRATICO **
+
+*[...Tributaré a mi maestro [---] el mismo respeto que a los autores de mis días...]*
+
+*[...Instruiré con preceptos, lecciones orales y demás modos de enseñanza a mis hijos, a los de mi maestro y a los discípulos que se me unan...]*
+
+*[...No accederé a pretensiones que busquen la administración de venenos, pesarios abortivos ni sugeriré a nadie cosa semejante...]*
+
+*[...Pasaré mi vida y ejerceré mi profesión con inocencia y pureza ...]*
+
+*[...me libraré de cometer voluntariamente faltas injuriosas o acciones corruptoras...]*
+
+*[...Si observo con fidelidad este juramento, séame concedido gozar felizmente mi vida y mi profesión, honrado siempre entre los hombres; si lo quebranto y soy perjuro, caiga sobre mí la suerte contraria...]*
+
+# ANEXO
+
+> Adjunto incluyo el RMD (Rmarkdown) que produce la presentación que viéramos hoy. 
+
+> Gracias por su tiempo,  
+
+> La mejor forma de acabar con la ignorancia es acabando con el egoi$mo
+
+> mbonilla@cipadcr.com
+
+
+```{r, echo=FALSE}
+xfun::embed_file(paste0(PONENCIA, "CharlaLiberia.RMD"))
+```
+
